@@ -1,0 +1,94 @@
+/* ==== NAVBAR ==== */
+.navbar {
+    background: #2c3e50; /* azul oscuro elegante */
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-logo a {
+    color: #ecf0f1;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #34495e;
+    color: #1abc9c;
+}
+
+.logout {
+    background: #e74c3c;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.logout:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Efecto de subrayado animado */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1abc9c;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+    }
+}
